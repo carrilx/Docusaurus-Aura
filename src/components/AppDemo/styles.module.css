@@ -1,0 +1,292 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+/* El móvil tiene su propio tema (siempre claro) para que se vea igual en modo oscuro */
+.phone {
+  --bg: #f6f8ff;
+  --ink: #1f2540;
+  --muted: #6b7399;
+  --brand: #5b7cfa;
+  --brand2: #3fc8a4;
+  --card: #ffffff;
+  --line: #e3e7f7;
+  width: 340px;
+  height: 640px;
+  border-radius: 38px;
+  border: 10px solid #1b1f33;
+  background: var(--bg);
+  color: var(--ink);
+  box-shadow: 0 24px 60px rgba(40, 50, 110, 0.28);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  font-size: 14px;
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 20px;
+  background: #1b1f33;
+  border-radius: 0 0 14px 14px;
+  z-index: 2;
+}
+
+.screen {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 26px;
+}
+
+.screenBody {
+  padding: 14px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hello {
+  margin: 0;
+  color: var(--muted);
+}
+
+.screenTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+
+.muted {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.moodRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mood {
+  font-size: 1.7rem;
+  background: var(--card);
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.mood:hover {
+  transform: translateY(-2px);
+}
+.moodActive {
+  border-color: var(--brand);
+  transform: scale(1.12);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.chip:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.chipActive {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  color: #fff;
+  border: 0;
+  border-radius: 14px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.primaryBtn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.linkBtn {
+  background: none;
+  border: 0;
+  color: var(--brand);
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card,
+.cardWarn,
+.entry {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.card p,
+.cardWarn p,
+.entry p {
+  margin: 0 0 6px;
+}
+.cardWarn {
+  background: #fff7e8;
+  border-color: #f4d9a6;
+}
+.cardWarn a {
+  font-weight: 700;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  font: inherit;
+  background: var(--card);
+  color: var(--ink);
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+/* Respiración */
+.breathStage {
+  position: relative;
+  height: 210px;
+  display: grid;
+  place-items: center;
+}
+.breathCircle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #a9bcff, var(--brand) 60%, var(--brand2));
+  opacity: 0.85;
+}
+.breathText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.breathText span {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Progreso */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 160px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 10px 6px;
+}
+.barCol {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+.bar {
+  width: 100%;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(180deg, var(--brand), var(--brand2));
+  transition: height 0.4s;
+}
+.stats {
+  display: flex;
+  gap: 8px;
+}
+.stats div {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats strong {
+  font-size: 1.3rem;
+}
+.stats span {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.entry small {
+  color: var(--muted);
+}
+
+/* Barra inferior */
+.tabbar {
+  display: flex;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+.tab {
+  flex: 1;
+  background: none;
+  border: 0;
+  padding: 8px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.65rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+.tab span {
+  font-size: 1.15rem;
+}
+.tabActive {
+  color: var(--brand);
+  font-weight: 700;
+}
