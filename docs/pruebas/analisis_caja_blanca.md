@@ -37,6 +37,7 @@ flowchart TD
     F --> G
 ```
 
+
 ## 3. Complejidad ciclomática
 
 Con N = 7 nodos, A = 8 aristas y P = 1 componente conexa:
