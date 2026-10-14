@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const GITHUB_USER = 'carrilx'; // 
-const REPO_NAME = 'docusaurus-aura'; //
+const REPO_NAME = 'Docusaurus-Aura'; //
 
 // En Vercel se publica en la raíz del dominio; en GitHub Pages bajo /<repo>/.
 // Vercel define la variable de entorno VERCEL=1 durante el build, así que
